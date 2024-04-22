@@ -1,6 +1,6 @@
 import "./style.css";
-import getUserIp from "./getUserLocation";
+import getWeather from "./getWeather";
 
-console.log(getUserIp());
+let i = await getWeather();
 
-console.log(`hi ${getUserIp()}`);
+console.log(i);
