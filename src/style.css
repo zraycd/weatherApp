@@ -116,3 +116,27 @@ body {
   justify-content: center;
   line-height: 0.8;
 }
+.bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.dayWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.dayWrap svg {
+  height: 40px;
+  width: 40px;
+}
+.dayDate {
+  font-size: 10pt;
+  font-family: "Futura Display";
+}
+.dayTemp {
+  font-size: 29pt;
+  font-family: "Futura Display";
+}
