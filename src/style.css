@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaPTLight.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura Display";
+  src: url("../fonts/Futura\ Display.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Futura", sans-serif;
+}
+body {
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55))
+      no-repeat fixed,
+    url("../images/snowy.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glow {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+.container {
+  height: 85dvh;
+  width: calc(100dvw - 15dvh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.date {
+  font-family: "Futura Display";
+  font-size: 28pt;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.search svg {
+  height: 30px;
+  width: 30px;
+}
+.wind {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.windText {
+  font-size: 20pt;
+}
+.wind svg {
+  height: 50px;
+  width: 50px;
+}

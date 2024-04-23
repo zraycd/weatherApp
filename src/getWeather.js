@@ -12,11 +12,11 @@ async function getWeather() {
   const raw = await data.json();
 
   let location = raw.location.name;
-  let temp = `${raw.current.temp_c}°C`;
+  let temp = `${raw.current.temp_c}\u00B0C`;
   let time = raw.location.localtime.split(" ")[1];
   let condition = raw.current.condition.text;
   let wind = `${raw.current.wind_kph}km/h`;
-  let feelsLike = `${raw.current.feelslike_c}°C`;
+  let feelsLike = `${raw.current.feelslike_c}\u00B0C`;
 
   return { location, temp, time, condition, wind, feelsLike };
 }
