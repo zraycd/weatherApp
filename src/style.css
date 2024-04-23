@@ -57,6 +57,9 @@ body {
   height: 30px;
   width: 30px;
 }
+.search svg:hover {
+  cursor: pointer;
+}
 .wind {
   display: flex;
   align-items: center;
@@ -139,4 +142,11 @@ body {
 .dayTemp {
   font-size: 29pt;
   font-family: "Futura Display";
+}
+.dayWrap:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px 30px;
+  margin: -20px -30px;
+  border-radius: 10px;
+  cursor: pointer;
 }
