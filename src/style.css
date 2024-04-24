@@ -33,6 +33,16 @@ body {
 .glow {
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
+@keyframes slide {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
 .container {
   height: 85dvh;
   width: calc(100dvw - 15dvh);
@@ -43,15 +53,17 @@ body {
 }
 .top {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
 }
 .date {
   font-family: "Futura Display";
   font-size: 28pt;
   font-weight: bold;
   letter-spacing: 1px;
+  justify-self: center;
 }
 .search svg {
   height: 30px;
@@ -60,10 +72,14 @@ body {
 .search svg:hover {
   cursor: pointer;
 }
+.search {
+  justify-self: end;
+}
 .wind {
   display: flex;
   align-items: center;
   gap: 7px;
+  justify-self: start;
 }
 .windText {
   font-size: 20pt;
@@ -130,6 +146,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
 }
 .dayWrap svg {
   height: 40px;
@@ -149,4 +166,31 @@ body {
   margin: -20px -30px;
   border-radius: 10px;
   cursor: pointer;
+}
+#popup {
+  display: none;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+#popup:target {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popupBox {
+  position: relative;
+  animation-name: slide;
+  animation-duration: 0.8s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30dvh;
+  width: 30dvw;
+  background-color: grey;
+  border-radius: 15px;
 }
